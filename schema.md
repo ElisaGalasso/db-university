@@ -3,39 +3,27 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
 ## Table: dipartimenti
 
 - id
-- lettere
-- filosofia
-- matematica
-- ingenieria
+- nome_del_dipartimento
+- indirizzo
+- numero
+- email
 
 ## Table: corsi di laurea
 
 - id
 - dipartimento_id
-- civiltà
-- letterature_classiche
-- informatica
-- ingegneria_informatica
+- nome
+- indirizzo
+- email
+- livello
 
 ## Table: corsi
 
 - id
-- corso_di_laurea
-- letteratura_latina
-- sistemi_operativi 1
-- Analisi_matematica 2
-
-## Table: apelli
-
-- id
-- 1
-- 2
-- 3
-
-## Table: appello_corso
-
-- appello_id
-- corso_id
+- corso_di_laurea_id
+- nome
+- descrizione
+- anno
 
 ## Table: corso_insegnante
 
@@ -53,12 +41,16 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
 ## Table: esame
 
 - id
-- appello_id
 - corso_id
 - studente_id
 - voto
 - crediti
 - data_esame
+
+### Table: esame_studente
+
+- esame_id
+- studente_id
 
 ## Table: studenti
 
